@@ -6,15 +6,21 @@
 }
 
 .card {
-  background-color: #57A1FC;
-  color: #FFFFFF;
+  width: 200px;
+  height: auto;
+  background-image: url("../img/with-title__back.png");
+  background-size: cover;
+  background-position: center;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  height: 200px;
 }
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.card img {
+  width: 20px;
+  height: auto;
+  border-radius: 8px;
 }/*# sourceMappingURL=style.css.map */
