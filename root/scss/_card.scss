@@ -1,0 +1,25 @@
+// _card.scss
+
+@use 'variables' as *;
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: $accent-sec;
+    color: $text-main;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    width: 300px;
+    transition: transform $transition-duration, box-shadow $transition-duration;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+}
