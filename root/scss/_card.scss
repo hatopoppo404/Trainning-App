@@ -2,19 +2,18 @@
 
 @use 'variables' as *;
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
+// .card-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 20px;
+//     justify-content: center;
+// }
 
 // _card.scss
 .card {
-    width: 200px;
-    height: auto;
-    // 1. 画像を指定（変わりに適当なURLやパスを入れてね）
     background-image: url('../img/with-title__back.png');
+    width: 200px;
+    aspect-ratio: 9 / 16;
     // 2. これが魔法の1行！枠いっぱいに隙間なく広げる
     background-size: cover;
     // 3. 画像のどこを中央にするか（上下左右センター）
@@ -23,16 +22,10 @@
     // さっきの変数を活用！
     border-radius: $border-radius;
     padding: 20px;
-    height: 200px; // 高さを固定するとカードっぽくなる
+    box-shadow: $box-shadow;
 
     &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    img {
-        width: 20px;
-        height: auto;
-        border-radius: $border-radius;
+        transform: scale(1.008);
+        transition: transform $transition-duration, box-shadow $transition-duration;
     }
 }
